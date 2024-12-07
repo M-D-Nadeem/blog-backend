@@ -48,7 +48,7 @@ app.use("/user",userRouter)
 app.use("/post",postRouter)
 
 const PORT=process.env.PORT || 3001
-app.listen(process.env.PORT,()=>{
+app.listen(3000,()=>{
     console.log(`Server is running on http:\\localhost:${process.env.PORT}`);
 })
 
