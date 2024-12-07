@@ -7,7 +7,7 @@ import { getAllPosts, getPostById } from "../controllers/post/getPostController.
 import { deletePostById } from "../controllers/post/deletePostController.js";
 
 const postRouter = express.Router();
-
+//
 postRouter.post("/create",authMiddleware, upload.array("coverImage", 1), createPost);
 postRouter.put("/update/:id",authMiddleware, upload.array("coverImage", 1),editPost )
 postRouter.get("/getAll",authMiddleware, getAllPosts);
