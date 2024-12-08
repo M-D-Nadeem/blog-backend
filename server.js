@@ -37,7 +37,7 @@ app.use("/ping",(req,res)=>{
 })
 app.use(express.json())
 app.use(cors({
-  origin:"http://localhost:5173",
+  origin:["http://localhost:5173","https://blog-frontend-bay-ten.vercel.app"],
   credentials:true
 }))
 app.use(cookieParser())

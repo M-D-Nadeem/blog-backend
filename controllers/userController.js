@@ -6,8 +6,8 @@ import axios from "axios"
 
 const cookieOption={
     httpOnly: true, // Prevents client-side JavaScript from accessing the cookie
-    secure: process.env.NODE_ENV === "production", // Ensures cookies are only sent over HTTPS in production
-    sameSite: "strict", // Helps mitigate CSRF attacks
+    secure: process.env.NODE_ENV === 'production',  // Set to true in production (HTTPS)
+    sameSite: 'None',
     maxAge: 24 * 60 * 60 * 1000, // Cookie expiration time (1 day)
 }
 const register = async(req,res) => {
@@ -55,8 +55,7 @@ const register = async(req,res) => {
  }
 
  const login = async(req,res) => {
-    try{
- 
+    try{     
      const user = await User.findOne({email: req.body.email})
      if(!user){
         return res.status(200).json({

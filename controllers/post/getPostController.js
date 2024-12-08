@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 export const getAllPosts = async (req, res) => {
     
-  try {
+  try {    
     const posts = await Post.find().populate('user')     
 
     if (!posts || posts.length === 0) {
