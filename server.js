@@ -33,7 +33,7 @@ const cloudFront=new CloudFrontClient({
 })
 
 app.use("/ping",(req,res)=>{
-    res.send("PONG!")
+    res.send("PONG2!")
 })
 app.use(express.json())
 app.use(cors({
